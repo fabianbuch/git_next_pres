@@ -1,8 +1,7 @@
-git_next.aux
-git_next.log
-git_next.nav
-git_next.out
-git_next.pdf
-git_next.snm
-git_next.toc
+git_next*.aux
+git_next*.log
+git_next*.nav
+git_next*.out
+git_next*.snm
+git_next*.toc
 
