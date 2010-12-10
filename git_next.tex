@@ -1,0 +1,461 @@
+
+\documentclass{beamer}
+
+\mode<presentation>
+{
+  \usetheme{Malmoe}
+  \usecolortheme{dolphin}
+  \setbeamercovered{transparent}
+}
+
+
+%%% ngerman: language set to new-german
+%\usepackage{german}
+\usepackage[ngerman]{babel}
+%%% inputenc: coding of german special characters
+\usepackage[utf8]{inputenc}
+%%% fontenc, ae, aecompl: coding of characters in PDF documents
+\usepackage[T1]{fontenc}
+\usepackage{ae,aecompl}
+\usepackage{times}
+
+\title[] % (optional, nur bei langen Titeln nötig)
+{Git}
+
+\subtitle
+{Next Generation Version Control}
+
+\author[] % (optional, nur bei vielen Autoren)
+{Fabian Buch}
+% - Namen müssen in derselben Reihenfolge wie im Papier erscheinen.
+% - Der \inst{?} Befehl sollte nur verwendet werden, wenn die Autoren
+%   unterschiedlichen Instituten angehören.
+
+\institute[] % (optional, aber oft nötig)
+{Synyx GmbH \& Co. KG}
+% - Der \inst{?} Befehl sollte nur verwendet werden, wenn die Autoren
+%   unterschiedlichen Instituten angehören.
+% - Keep it simple, niemand interessiert sich für die genau Adresse.
+
+\date[] % (optional, sollte der abgekürzte Konferenzname sein)
+{2010-12-10}
+% - Voller oder abgekürzter Name sind möglich.
+% - Dieser Eintrag ist nicht für das Publikum gedacht (das weiß
+%   nämlich, bei welcher Konferenz es ist), sondern für Leute, die die
+%   Folien später lesen.
+
+\subject{}
+% Dies wird lediglich in den PDF Informationskatalog einfügt. Kann gut
+% weggelassen werden.
+
+
+% Falls eine Logodatei namens "university-logo-filename.xxx" vorhanden
+% ist, wobei xxx ein von latex bzw. pdflatex lesbares Graphikformat
+% ist, so kann man wie folgt ein Logo einfügen:
+
+%\pgfdeclareimage[height=0.4cm]{logo-hs}{logo_hs}
+%\logo{\pgfuseimage{logo-hs}}
+
+%\newcommand\BackgroundPicture[3]{
+%    \setbeamertemplate{background}{
+%        \parbox[c][\paperheight]{\paperwidth}{
+%            \vfill \hfill
+%            \includegraphics[width=#2\paperwidth,height=#3\paperheight]{#1}
+%            \hfill \vfill
+%        }
+%    }
+%}
+
+%\usebackgroundtemplate{
+%\includegraphics[width=\paperwidth,
+%height=\paperheight]{synyxbg}
+%}
+
+%\pgfdeclareimage[height=20cm]{synyxbg}{synyxbg}
+%\logo{\pgfuseimage{synyxbg}}
+
+\begin{document}
+%\setbeamertemplate{background canvas}{\includegraphics[height=262px,width=\paperwidth]{praesentationshg_ohne}}
+%\BackgroundPicture{synyxbg,1,1}
+
+
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+%\begin{frame}{Agenda}
+%  \tableofcontents[pausesections]
+%  % Die Option [pausesections] könnte nützlich sein.
+%\end{frame}
+
+
+
+% Einen Vortrag zu strukturieren ist nicht immer einfach. Die
+% nachfolgende Struktur kann unangemessen sein. Hier ein paar Regeln,
+% die für diese Lösungsvorlage gelten:
+
+% - Es sollte genau zwei oder drei Abschnitte geben (neben der
+%   Zusammenfassung). 
+% - *Höchstens* drei Unterabschnitte pro Abschnitt.
+% - Pro Rahmen sollte man zwischen 30s und 2min reden. Es sollte also
+%   15 bis 30 Rahmen geben.
+
+% - Konferenzteilnehmer wissen oft wenig von der Materie des
+%   Vortrags. Deshalb: vereinfachen!
+% - In 20 Minuten ist es schon schwer genug, die Hauptbotschaft zu
+%   vermitteln. Deshalb sollten Details ausgelassen werden, selbst
+%   wenn dies zu Ungenauigkeiten oder Halbwahrheiten führt.          
+% - Falls man Details weglässt, die eigentlich wichtig für einen
+%   Beweis/Implementation sind, so sagt man dies einmal nüchtern. Alle
+%   werden damit glücklich sein.
+
+\section{Git Introduction}
+
+\subsection{Introduction to Git}\label{sub:einleitung}
+
+
+%\begin{frame}{Überschriften müssen informativ sein.\\
+%    Korrekte Groß-/Kleinschreibung beachten.}{Untertitel sind optional.}
+  % - Eine Überschrift fasst einen Rahmen verständlich zusammen. Man
+  %   muss sie verstehen können, selbst wenn man nicht den Rest des
+  %   Rahmens versteht.
+
+
+\begin{frame}{Introduction to Git}
+  \begin{itemize}
+  \item
+    Basic theory and hands on tips
+  \end{itemize}
+\end{frame}
+
+\section{Version Control}
+
+\subsection{Local Version Control}
+
+\begin{frame}{Manual}
+  \begin{itemize}
+  \item
+    numbered directories
+  \item
+    timestamping
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Local Version Control (e.g. RCS)}
+    \pgfdeclareimage[height=5cm]{local computer}{img/18333fig0101-tn}
+    \centering
+    \pgfuseimage{local computer}
+    \hfill\vfill
+\end{frame}
+
+\subsection{Centralized Version Control}
+
+\begin{frame}{Centralized Version Control}
+    \pgfdeclareimage[height=5cm]{local computer}{img/18333fig0102-tn}
+    \centering
+    \pgfuseimage{local computer}
+    \hfill\vfill
+\end{frame}
+
+\begin{frame}{Centralized Version Control Systems}
+  \begin{itemize}
+  \item
+    CVS
+  \item
+    Subversion
+  \item
+    Perforce
+  \end{itemize}
+\end{frame}
+
+
+\subsection{Distributed Version Control}
+
+\begin{frame}{Distributed Version Control}
+    \pgfdeclareimage[height=5cm]{local computer}{img/18333fig0103-tn}
+    \centering
+    \pgfuseimage{local computer}
+    \hfill\vfill
+\end{frame}
+
+\begin{frame}{Distributed Version Control Systems}
+  \begin{itemize}
+  \item
+    Git
+  \item
+    Gnu Arch
+  \item
+    Darcs
+  \end{itemize}
+\end{frame}
+
+\section{Git Basics}
+
+\subsection{Historic Goals}
+
+\begin{frame}{Historic Goals}
+  \begin{itemize}
+  \item
+    Speed
+  \item
+    Simple design
+  \item
+    Strong support for non-linear development (thousands of parallel branches)
+  \item
+    Fully distributed
+  \item
+    Able to handle large projects like the Linux kernel efficiently (speed and data size)
+  \end{itemize}
+\end{frame}
+
+\subsection{Snapshots, Not Differences}
+
+\begin{frame}{Deltas}
+    \pgfdeclareimage[height=5cm]{local computer}{img/18333fig0104-tn}
+    \centering
+    \pgfuseimage{local computer}
+    \hfill\vfill
+\end{frame}
+
+\begin{frame}{Snapshots}
+    \pgfdeclareimage[height=5cm]{local computer}{img/18333fig0105-tn}
+    \centering
+    \pgfuseimage{local computer}
+    \hfill\vfill
+\end{frame}
+
+\subsection{Working Offline}
+
+\begin{frame}{Working Offline}
+  \begin{itemize}
+  \item
+    Nearly all operations are local
+  \item
+    full local copy of repository (full history)
+  \end{itemize}
+\end{frame}
+
+\subsection{Git has Integrity}
+
+\begin{frame}{Git has Integrity}
+  \begin{itemize}
+  \item
+    Everything is SHA-1 check-summed
+  \end{itemize}
+\end{frame}
+
+\subsection{The three States}
+
+\begin{frame}{The three States}
+  \begin{itemize}
+  \item
+    commited
+  \item
+    modified
+  \item
+    staged
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{The three States}
+    \pgfdeclareimage[height=5cm]{local computer}{img/18333fig0106-tn}
+    \centering
+    \pgfuseimage{local computer}
+    \hfill\vfill
+\end{frame}
+
+\begin{frame}{File Status Lifecycle}
+    \pgfdeclareimage[height=5cm]{local computer}{img/18333fig0201-tn}
+    \centering
+    \pgfuseimage{local computer}
+    \hfill\vfill
+\end{frame}
+
+\subsection{Demo}
+
+\begin{frame}{Demo}
+ init, add, commit, status, file staged and unstaged, git diff, git diff --cached (--staged), git log --graph, gitk, git checkout -- <file>
+\end{frame}
+
+\section{Branching}
+
+\subsection{What is a Branch in Git?}
+
+\begin{frame}{Single commit repository data.}
+    \pgfdeclareimage[height=5cm]{local computer}{img/18333fig0301-tn}
+    \centering
+    \pgfuseimage{local computer}
+    \hfill\vfill
+\end{frame}
+
+\begin{frame}{Git object data for multiple commits.}
+    \pgfdeclareimage[height=5cm]{local computer}{img/18333fig0302-tn}
+    \centering
+    \pgfuseimage{local computer}
+    \hfill\vfill
+\end{frame}
+
+\begin{frame}{Branch pointing intoi the commit data's history.}
+    \pgfdeclareimage[height=5cm]{local computer}{img/18333fig0303-tn}
+    \centering
+    \pgfuseimage{local computer}
+    \hfill\vfill
+\end{frame}
+
+\begin{frame}{Create a new branch}
+  \$ git branch testing
+\end{frame}
+
+\begin{frame}{Multiple branches pointing into the commit's data history.}
+    \pgfdeclareimage[height=5cm]{local computer}{img/18333fig0304-tn}
+    \centering
+    \pgfuseimage{local computer}
+    \hfill\vfill
+\end{frame}
+
+\begin{frame}{HEAD file pointing to the branch you're on.}
+    \pgfdeclareimage[height=5cm]{local computer}{img/18333fig0305-tn}
+    \centering
+    \pgfuseimage{local computer}
+    \hfill\vfill
+\end{frame}
+
+\begin{frame}{Switch branch}
+  \$ git checkout testing
+\end{frame}
+
+\begin{frame}{HEAD points to another branch when you switch branches.}
+    \pgfdeclareimage[height=5cm]{local computer}{img/18333fig0306-tn}
+    \centering
+    \pgfuseimage{local computer}
+    \hfill\vfill
+\end{frame}
+
+\begin{frame}{Do some changes}
+  \$ vim test.rb\\
+  \$ git commit -a -m 'made a change'
+\end{frame}
+
+\begin{frame}{The branch that HEAD points to moves forward with each commit.}
+    \pgfdeclareimage[height=5cm]{local computer}{img/18333fig0307-tn}
+    \centering
+    \pgfuseimage{local computer}
+    \hfill\vfill
+\end{frame}
+
+\begin{frame}{Switch branch to master}
+  \$ git checkout master
+\end{frame}
+
+\begin{frame}{HEAD moves to another branch on a checkout.}
+    \pgfdeclareimage[height=5cm]{local computer}{img/18333fig0308-tn}
+    \centering
+    \pgfuseimage{local computer}
+    \hfill\vfill
+\end{frame}
+
+\begin{frame}{Do some other changes}
+  \$ vim test.rb\\
+  \$ git commit -a -m 'made other change'
+\end{frame}
+
+\begin{frame}{The branch histories have diverged.}
+    \pgfdeclareimage[height=5cm]{local computer}{img/18333fig0309-tn}
+    \centering
+    \pgfuseimage{local computer}
+    \hfill\vfill
+\end{frame}
+
+\subsection{Merging}
+
+\begin{frame}{A Hotfix}
+  \$ git checkout -b 'hotfix'\\
+  Switched to a new branch "hotfix"\\
+  \$ vim index.html\\
+  \$ git commit -a -m 'fixed the broken email address'\\
+  hotfix: created 3a0874c: "fixed the broken email address"\\
+   1 files changed, 0 insertions(+), 1 deletions(-)
+\end{frame}
+
+\begin{frame}{Hotfix Branch}
+    \pgfdeclareimage[height=5cm]{local computer}{img/18333fig0313-tn}
+    \centering
+    \pgfuseimage{local computer}
+    \hfill\vfill
+\end{frame}
+
+\begin{frame}{Fast forward merge}
+  \$ git checkout master\\
+  \$ git merge hotfix\\
+  Updating f42c576..3a0874c\\
+  Fast forward\\
+   README |    1 -\\
+   1 files changed, 0 insertions(+), 1 deletions(-)
+\end{frame}
+
+
+\begin{frame}{Your master branch points to the same place as your hotfix branch after the merge.}
+    \pgfdeclareimage[height=5cm]{local computer}{img/18333fig0314-tn}
+    \centering
+    \pgfuseimage{local computer}
+    \hfill\vfill
+\end{frame}
+
+\begin{frame}{Delete hotfix branch}
+  \$ git branch -d hotfix\\
+  Deleted branch hotfix (3a0874c).
+\end{frame}
+
+\begin{frame}{back to your work-in-progress branch}
+  \$ git checkout iss53\\
+  Switched to branch "iss53"\\
+  \$ vim index.html\\
+  \$ git commit -a -m 'finished the new footer  issue 53 '\\
+  iss53: created ad82d7a: "finished the new footer  issue 53 "\\
+   1 files changed, 1 insertions(+), 0 deletions(-)
+\end{frame}
+
+\begin{frame}{Your iss53 branch can move forward independently.}
+    \pgfdeclareimage[height=5cm]{local computer}{img/18333fig0315-tn}
+    \centering
+    \pgfuseimage{local computer}
+    \hfill\vfill
+\end{frame}
+
+\begin{frame}{Merge finished feature into master}
+  \$ git checkout master\\
+  \$ git merge iss53\\
+  Merge made by recursive.\\
+   README |    1 +\\
+   1 files changed, 1 insertions(+), 0 deletions(-)
+\end{frame}
+
+\begin{frame}{Git automatically identifies the best common-ancestor merge base for branch merging.}
+    \pgfdeclareimage[height=5cm]{local computer}{img/18333fig0316-tn}
+    \centering
+    \pgfuseimage{local computer}
+    \hfill\vfill
+\end{frame}
+
+\begin{frame}{Git automatically creates a new commit object that contains the merged work.}
+    \pgfdeclareimage[height=5cm]{local computer}{img/18333fig0317-tn}
+    \centering
+    \pgfuseimage{local computer}
+    \hfill\vfill
+\end{frame}
+
+\begin{frame}{Up Next}
+  \begin{itemize}
+  \item
+    Distributed Git
+  \item
+    Changing History
+  \item
+    DOs and DON'Ts
+  \end{itemize}
+\end{frame}
+
+
+\end{document}
+
