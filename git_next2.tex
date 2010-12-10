@@ -1,0 +1,149 @@
+
+\documentclass{beamer}
+
+\mode<presentation>
+{
+  \usetheme{Malmoe}
+  \usecolortheme{dolphin}
+  \setbeamercovered{transparent}
+}
+
+
+%%% ngerman: language set to new-german
+%\usepackage{german}
+\usepackage[ngerman]{babel}
+%%% inputenc: coding of german special characters
+\usepackage[utf8]{inputenc}
+%%% fontenc, ae, aecompl: coding of characters in PDF documents
+\usepackage[T1]{fontenc}
+\usepackage{ae,aecompl}
+\usepackage{times}
+
+\title[] % (optional, nur bei langen Titeln nötig)
+{Git}
+
+\subtitle
+{Digging deeper}
+
+\author[] % (optional, nur bei vielen Autoren)
+{Fabian Buch}
+% - Namen müssen in derselben Reihenfolge wie im Papier erscheinen.
+% - Der \inst{?} Befehl sollte nur verwendet werden, wenn die Autoren
+%   unterschiedlichen Instituten angehören.
+
+\institute[] % (optional, aber oft nötig)
+{Synyx GmbH \& Co. KG}
+% - Der \inst{?} Befehl sollte nur verwendet werden, wenn die Autoren
+%   unterschiedlichen Instituten angehören.
+% - Keep it simple, niemand interessiert sich für die genau Adresse.
+
+\date[] % (optional, sollte der abgekürzte Konferenzname sein)
+{2010-12-10}
+% - Voller oder abgekürzter Name sind möglich.
+% - Dieser Eintrag ist nicht für das Publikum gedacht (das weiß
+%   nämlich, bei welcher Konferenz es ist), sondern für Leute, die die
+%   Folien später lesen.
+
+\subject{}
+% Dies wird lediglich in den PDF Informationskatalog einfügt. Kann gut
+% weggelassen werden.
+
+
+% Falls eine Logodatei namens "university-logo-filename.xxx" vorhanden
+% ist, wobei xxx ein von latex bzw. pdflatex lesbares Graphikformat
+% ist, so kann man wie folgt ein Logo einfügen:
+
+%\pgfdeclareimage[height=0.4cm]{logo-hs}{logo_hs}
+%\logo{\pgfuseimage{logo-hs}}
+
+%\newcommand\BackgroundPicture[3]{
+%    \setbeamertemplate{background}{
+%        \parbox[c][\paperheight]{\paperwidth}{
+%            \vfill \hfill
+%            \includegraphics[width=#2\paperwidth,height=#3\paperheight]{#1}
+%            \hfill \vfill
+%        }
+%    }
+%}
+
+%\usebackgroundtemplate{
+%\includegraphics[width=\paperwidth,
+%height=\paperheight]{synyxbg}
+%}
+
+%\pgfdeclareimage[height=20cm]{synyxbg}{synyxbg}
+%\logo{\pgfuseimage{synyxbg}}
+
+\begin{document}
+%\setbeamertemplate{background canvas}{\includegraphics[height=262px,width=\paperwidth]{praesentationshg_ohne}}
+%\BackgroundPicture{synyxbg,1,1}
+
+
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+%\begin{frame}{Agenda}
+%  \tableofcontents[pausesections]
+%  % Die Option [pausesections] könnte nützlich sein.
+%\end{frame}
+
+
+
+% Einen Vortrag zu strukturieren ist nicht immer einfach. Die
+% nachfolgende Struktur kann unangemessen sein. Hier ein paar Regeln,
+% die für diese Lösungsvorlage gelten:
+
+% - Es sollte genau zwei oder drei Abschnitte geben (neben der
+%   Zusammenfassung). 
+% - *Höchstens* drei Unterabschnitte pro Abschnitt.
+% - Pro Rahmen sollte man zwischen 30s und 2min reden. Es sollte also
+%   15 bis 30 Rahmen geben.
+
+% - Konferenzteilnehmer wissen oft wenig von der Materie des
+%   Vortrags. Deshalb: vereinfachen!
+% - In 20 Minuten ist es schon schwer genug, die Hauptbotschaft zu
+%   vermitteln. Deshalb sollten Details ausgelassen werden, selbst
+%   wenn dies zu Ungenauigkeiten oder Halbwahrheiten führt.          
+% - Falls man Details weglässt, die eigentlich wichtig für einen
+%   Beweis/Implementation sind, so sagt man dies einmal nüchtern. Alle
+%   werden damit glücklich sein.
+
+\section{Distributed Git}
+
+\subsection{Distributed Workflows}
+
+\begin{frame}{Distributed Workflows}
+  \begin{itemize}
+  \item
+    Basic theory and hands on tips
+  \end{itemize}
+\end{frame}
+
+\section{Changing History}
+
+\subsection{Don't Change History available to Others}
+
+\begin{frame}{Don't Change History available to Others}
+\end{frame}
+
+\subsection{Rebase}
+
+\begin{frame}{Rebase}
+\end{frame}
+
+\subsection{Rebase}
+
+\begin{frame}{--amend}
+\end{frame}
+
+\section{DOs and DON'Ts}
+
+\begin{frame}{DOs and DON'Ts}
+\end{frame}
+
+
+
+\end{document}
+
