@@ -110,6 +110,15 @@
 %   Beweis/Implementation sind, so sagt man dies einmal nüchtern. Alle
 %   werden damit glücklich sein.
 
+\section{Tags}
+
+\begin{frame}{Tags}
+  \begin{itemize}
+  \item
+    
+  \end{itemize}
+\end{frame}
+
 \section{Distributed Git}
 
 \subsection{Distributed Workflows}
@@ -173,12 +182,80 @@
     \hfill\vfill
 \end{frame}
 
+\subsection{Remote Branches}
+
+\begin{frame}{Remote Branches}
+  \begin{itemize}
+    \item
+      remote branches are references to the state of branches on your remote repositories
+    \item
+      they're local branches that you can't move
+    \item
+      they're moved automatically whenever you do any network communication
+    \item
+      (remote)/(branch)
+  \end{itemize}
+\end{frame}
+
+\subsection{Demo}
+
+\begin{frame}{Demo}
+  \begin{itemize}
+    \item
+      empty central repo --bare
+    \item
+      second user: git clone
+    \item
+      git add remote origin
+    \item
+      git fetch
+    \item
+      git merge
+    \item
+      git pull
+    \item
+      git push
+    \item
+      git format-patch origin
+    \item
+  \end{itemize}
+\end{frame}
 
 \section{Changing History}
 
 \subsection{Don't Change History available to Others}
 
 \begin{frame}{Don't Change History available to Others}
+  \begin{itemize}
+    \item
+      !!
+    \item
+      unless you know exaclty what you're doing
+  \end{itemize}
+\end{frame}
+
+\subsection{Cherry Pick (doesn't change history)}
+
+\begin{frame}{Cherry Pick (doesn't change history)}
+    \pgfdeclareimage[height=5cm]{cherrypick1}{img/cherrypick1}
+    \centering
+    \pgfuseimage{cherrypick1}
+    \hfill\vfill
+\end{frame}
+
+\begin{frame}{Cherry Pick (doesn't change history)}
+  git cherry-pick e43a6
+\end{frame}
+
+\begin{frame}{Cherry Pick (doesn't change history)}
+    \pgfdeclareimage[height=5cm]{cherrypick1}{img/cherrypick1}
+    \centering
+    \pgfuseimage{cherrypick1}
+    \hfill\vfill
+\end{frame}
+
+\begin{frame}{Cherry Pick (doesn't change history)}
+  git branch -d idea_branch
 \end{frame}
 
 \subsection{Rebase}
@@ -191,16 +268,44 @@
 \begin{frame}{--amend}
 \end{frame}
 
-\subsection{Cherry Pick (doesn't change history)}
-
-\begin{frame}{Cherry Pick (doesn't change history)}
-\end{frame}
-
 \section{DOs and DON'Ts}
 
 \begin{frame}{DOs and DON'Ts}
 \end{frame}
 
+
+\section{Tips and Tricks}
+
+\begin{frame}{Tips and Tricks / Demo}
+  \begin{itemize}
+    \item
+      first line of commit msg is used as summary
+    \item
+      git diff --check
+    \item
+      git log featureXY --not master
+    \item
+      git shortlog --no-merges master --not v1.0.1
+    \item
+      git reflog
+    \item
+      git show master@{yesterday}
+  \end{itemize}
+\end{frame}
+
+
+\section{Up Next}
+
+\begin{frame}{Up Next}
+  \begin{itemize}
+    \item
+      advanced topics
+    \item
+      fast-forward merges of feature-branches?
+    \item
+      advanced branching strategies
+  \end{itemize}
+\end{frame}
 
 
 \end{document}
