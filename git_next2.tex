@@ -117,9 +117,62 @@
 \begin{frame}{Distributed Workflows}
   \begin{itemize}
   \item
-    Basic theory and hands on tips
+    Unlike Centralized Version Control Systems (CVCSs), the distributed nature of Git allows you to be far more flexible in how developers collaborate on projects.
   \end{itemize}
 \end{frame}
+
+\begin{frame}{Centralized Workflow}
+  \begin{itemize}
+  \item
+    One central hub, or repository, can accept code, and everyone synchronizes their work to it.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Centralized Workflow}
+    \pgfdeclareimage[height=5cm]{centralized}{img/centralized}
+    \centering
+    \pgfuseimage{centralized}
+    \hfill\vfill
+\end{frame}
+
+\begin{frame}{Integration Manager Workflow}
+    \pgfdeclareimage[height=5cm]{github}{img/github}
+    \centering
+    \pgfuseimage{github}
+    \hfill\vfill
+\end{frame}
+
+\begin{frame}{Integration Manager Workflow - Advantages}
+  \begin{itemize}
+  \item
+    you can continue to work
+  \item
+    the maintainer of the main repository can pull in your changes at any time
+  \item
+    contributors don't have to wait for the project to incorporate their changes
+  \item
+    each party can work at their own pace
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Dictator and Lieutenants Workflow}
+  \begin{itemize}
+  \item
+    a variant of a multiple-repository workflow
+  \item
+    generally used by huge projects with hundreds of collaborators
+  \item
+    various integration managers are in charge of certain parts of the repository
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Dictator and Lieutenants Workflow}
+    \pgfdeclareimage[height=5cm]{dictator}{img/dictator}
+    \centering
+    \pgfuseimage{dictator}
+    \hfill\vfill
+\end{frame}
+
 
 \section{Changing History}
 
