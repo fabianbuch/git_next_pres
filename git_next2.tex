@@ -115,7 +115,11 @@
 \begin{frame}{Tags}
   \begin{itemize}
   \item
-    
+    lightweight tags
+  \item
+    tag objects
+  \item
+    gpg signed tags (useful for releases)
   \end{itemize}
 \end{frame}
 
@@ -138,14 +142,14 @@
 \end{frame}
 
 \begin{frame}{Centralized Workflow}
-    \pgfdeclareimage[height=5cm]{centralized}{img/centralized}
+    \pgfdeclareimage[height=5cm]{centralized}{img/18333fig0501-tn}
     \centering
     \pgfuseimage{centralized}
     \hfill\vfill
 \end{frame}
 
 \begin{frame}{Integration Manager Workflow}
-    \pgfdeclareimage[height=5cm]{github}{img/github}
+    \pgfdeclareimage[height=5cm]{github}{img/18333fig0502-tn}
     \centering
     \pgfuseimage{github}
     \hfill\vfill
@@ -176,7 +180,7 @@
 \end{frame}
 
 \begin{frame}{Dictator and Lieutenants Workflow}
-    \pgfdeclareimage[height=5cm]{dictator}{img/dictator}
+    \pgfdeclareimage[height=5cm]{dictator}{img/18333fig0503-tn}
     \centering
     \pgfuseimage{dictator}
     \hfill\vfill
@@ -237,7 +241,7 @@
 \subsection{Cherry Pick (doesn't change history)}
 
 \begin{frame}{Cherry Pick (doesn't change history)}
-    \pgfdeclareimage[height=5cm]{cherrypick1}{img/cherrypick1}
+    \pgfdeclareimage[height=5cm]{cherrypick1}{img/18333fig0526-tn}
     \centering
     \pgfuseimage{cherrypick1}
     \hfill\vfill
@@ -248,24 +252,46 @@
 \end{frame}
 
 \begin{frame}{Cherry Pick (doesn't change history)}
-    \pgfdeclareimage[height=5cm]{cherrypick1}{img/cherrypick1}
+    \pgfdeclareimage[height=5cm]{cherrypick2}{img/18333fig0527-tn}
     \centering
-    \pgfuseimage{cherrypick1}
+    \pgfuseimage{cherrypick2}
     \hfill\vfill
 \end{frame}
 
 \begin{frame}{Cherry Pick (doesn't change history)}
-  git branch -d idea_branch
-\end{frame}
-
-\subsection{Rebase}
-
-\begin{frame}{Rebase}
+  git branch -d idea-branch
 \end{frame}
 
 \subsection{--amend}
 
 \begin{frame}{--amend}
+  \begin{itemize}
+    \item
+      git commit --amend
+    \item
+      opens last commit for changes (commit msg, files..)
+  \end{itemize}
+\end{frame}
+
+\subsection{Rebase}
+
+\begin{frame}{Rebase - before}
+    \pgfdeclareimage[height=5cm]{rebase1}{img/18333fig0516-tn}
+    \centering
+    \pgfuseimage{rebase1}
+    \hfill\vfill
+\end{frame}
+
+\begin{frame}{Rebase}
+  \$ git checkout featureA\\
+  \$ git rebase origin/master\\
+\end{frame}
+
+\begin{frame}{Rebase - after}
+    \pgfdeclareimage[height=5cm]{rebase1}{img/18333fig0517-tn}
+    \centering
+    \pgfuseimage{rebase1}
+    \hfill\vfill
 \end{frame}
 
 \section{DOs and DON'Ts}
@@ -290,6 +316,18 @@
       git reflog
     \item
       git show master@{yesterday}
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Git SVN}
+  \begin{itemize}
+    \item
+      centralized workflow
+    \item
+      linear history
+    \item
+      git stash
   \end{itemize}
 \end{frame}
 
